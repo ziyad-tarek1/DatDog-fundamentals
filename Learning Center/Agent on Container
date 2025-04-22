@@ -1,0 +1,6 @@
+The Datadog Agent is open source software that runs on your hosts alongside your containers. It collects events, logs, and metrics and sends them to Datadog to be processed and displayed.
+
+Whether the Agent runs as a process directly on a host or in a container, it is capable of monitoring aspects of the host, including CPU usage, filesystem operations, memory utilization, running processes, and network activity. When the Agent operates within a container, it gains the additional capability of monitoring the container runtime itself and other coexisting containers.
+
+In a Docker environment, this is accomplished by mounting host resources as volumes within the Agent container. In the diagram below, the Agent container is granted access to /var/run/docker.sock to monitor the Docker daemon and other containers. Additionally, it has access to /proc and /sys/fs/cgroups to monitor the underlying host.
+

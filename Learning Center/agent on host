@@ -1,0 +1,35 @@
+
+```bash
+systemctl start datadog-agent
+```
+
+
+```bash
+datadog-agent status
+```
+
+```bash
+datadog-agent configcheck
+```
+
+[config](https://github.com/DataDog/datadog-agent/blob/main/pkg/config/config_template.yaml)
+
+```bash
+datadog-agent config  
+```
+
+
+```bash
+root@agent-host:~/lab# datadog-agent config|grep ^env
+env: agent-host-lab
+root@agent-host:~/lab# env |grep DD_ENV
+DD_ENV=agent-host-lab
+```
+
+```bash
+cat /etc/datadog-agent/datadog.yaml
+```
+
+```bash
+systemctl restart datadog-agent
+```

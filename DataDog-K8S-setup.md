@@ -54,6 +54,19 @@ To modify existing deployment:
 helm upgrade datadog -n datadog -f values.yaml datadog/datadog
 ```
 
+### 🛠 custom integration
+
+to add [custom integration](https://github.com/DataDog/integrations-core)
+```yaml
+
+datadog:
+  confd:
+    nginx.yaml: |
+      init_config:
+      instances:
+        - nginx_status_url: http://localhost/nginx_status
+
+```
 
 ### 🛠 Pod Tolerations
 - This is fairly easy to do using the Datadog Helm chart, as there is a specific section in the values.yaml file to add tolerations:

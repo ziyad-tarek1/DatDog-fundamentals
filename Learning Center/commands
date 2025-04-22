@@ -1,0 +1,12 @@
+
+
+```bash
+docker compose exec dd-agent agent status
+```
+
+
+
+
+```bash
+docker compose exec dd-agent agent check disk
+```
